@@ -1,0 +1,7 @@
+#myCanvas {
+  border: 1px black solid;
+}
+
+.area {
+  border: unset;
+}
