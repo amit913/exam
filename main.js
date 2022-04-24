@@ -59,7 +59,7 @@ function clearCanvasAndForm() {
 }
 
 function onWindowLoad() {
-  const calc = document.querySelector("#myForm");
+  const myForm = document.querySelector("#myForm");
   myForm.onsubmit = drawRectangle;
   const reset = document.querySelector("#reset");
   reset.onclick = clearCanvasAndForm;
