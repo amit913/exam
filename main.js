@@ -75,14 +75,7 @@ function onWindowLoad() {
   width.value = localStorage.getItem("width");
   height.value = localStorage.getItem("height");
 
-  if (
-    xPosition.value !== "" &&
-    yPosition.value !== "" &&
-    width.value !== "" &&
-    height.value !== ""
-  ) {
-    drawRectangle();
-  }
+  drawRectangle();
 }
 
 window.onload = onWindowLoad;
