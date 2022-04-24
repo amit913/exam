@@ -15,31 +15,35 @@
     />
   </head>
   <body>
-      <section class="container">
-          <div class="row">
-      <div class="col">
+    <section class="container">
+
+        <!-- Title -->
+    <div class="row">
+
+    <div class="col">
     <h1>Rectangle Caculator</h1>
     </div></div>
 
     <div class="row">
 
+        <!-- Form -->
     <div class="col">
     <form id="myForm" action="#" "form-group">
       <div>
-        <label>width</label>
-        <input class="form-control me-2" type="number" id="width" />
+        <label>Width</label>
+        <input min="1" max="300" required class="form-control me-2" type="number" id="width" />
       </div>
       <div>
-        <label>height</label>
-        <input class="form-control me-2" type="number" id="height" />
+        <label>Height</label>
+        <input min="1" max="300" required class="form-control me-2" type="number" id="height" />
       </div>
       <div>
         <label>Position (x)</label>
-        <input class="form-control me-2" type="number" id="xPosition" />
+        <input min="1" max="300" required class="form-control me-2" type="number" id="xPosition" />
       </div>
       <div>
         <label>Position (y)</label>
-        <input class="form-control me-2" type="number" id="yPosition" />
+        <input min="1" max="300" required class="form-control me-2" type="number" id="yPosition" />
       </div>
       <div>Rectangle Area: <input class="area" type="text" /></div>
 
@@ -49,6 +53,8 @@
       </div>
     </form>
     </div>
+
+    <!-- Canvas -->
     <div class="col">
       <canvas id="myCanvas" height="300" width="300"></canvas>
     </div>

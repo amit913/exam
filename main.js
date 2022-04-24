@@ -1,18 +1,5 @@
 function validation(x, y, w, h) {
-  if (
-    x === "" ||
-    x < 1 ||
-    x > 300 ||
-    y === "" ||
-    y < 1 ||
-    y > 300 ||
-    w === "" ||
-    w < 1 ||
-    w > 300 ||
-    h === "" ||
-    h < 1 ||
-    h > 300
-  ) {
+  if (+x + +w > 300 || +y + +h > 300) {
     return (isValid = false);
   } else {
     return (isValid = true);
@@ -21,14 +8,11 @@ function validation(x, y, w, h) {
 
 function drawRectangle() {
   myCanvas = document.querySelector("#myCanvas");
-
   const painter = myCanvas.getContext("2d");
-
   const xPosition = document.querySelector("#xPosition");
   const yPosition = document.querySelector("#yPosition");
   const width = document.querySelector("#width");
   const height = document.querySelector("#height");
-
   const x = xPosition.value;
   const y = yPosition.value;
   const w = width.value;
@@ -48,7 +32,7 @@ function drawRectangle() {
 
     localStorage.setItem("xPosition", x);
     localStorage.setItem("yPosition", y);
-    localStorage.setItem("width", x);
+    localStorage.setItem("width", w);
     localStorage.setItem("height", h);
   } else {
     alert("Invalid values!");
